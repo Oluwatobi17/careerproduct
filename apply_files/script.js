@@ -44,16 +44,17 @@ function HandleSubmition(e) {
             console.error('Error:', error);
         });
 
-        error.display = "hidden";
+        error.style.display = "hidden";
         setTimeout(() => {
             alert('Thank you for your application! We will be in touch soon.');
             forms.reset();
             submitButton.disabled = false;
             submitButton.textContent = 'Submit Application';
+            window.location.reload();
         }, 2000);
     }else{
         error.color = "red";
-        error.display = "block";
+        error.style.display = "block";
         error.textContent = 'Email and Confirm Email does not match';
         is_empty = true;
     }
