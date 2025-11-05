@@ -55,7 +55,8 @@ function HandleSubmition(e) {
     }else{
         error.color = "red";
         error.style.display = "block";
-        error.textContent = 'Email and Confirm Email does not match';
+        let msg = is_empty?'Kindly ensure you fill all field':'Email and Confirm Email does not match';
+        error.textContent = msg;
         is_empty = true;
     }
 }
